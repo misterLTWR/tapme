@@ -66,15 +66,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { SementaraPage } from '../pages/sementara/sementara';
 import { Autosize} from '../components/autosize/autosize';
-var config = {
-  apiKey: "AIzaSyB7mCj3_4-SOo9wEDC9_JX5D7GSvxAuJWY",
-  authDomain: "tapme-io.firebaseapp.com",
-  databaseURL: "https://tapme-io.firebaseio.com",
-  projectId: "tapme-io",
-  storageBucket: "tapme-io.appspot.com",
-  messagingSenderId: "1010368489627"
-};
-firebase.initializeApp(config);
+
 
 @NgModule({
   declarations: [
