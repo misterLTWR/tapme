@@ -1,0 +1,60 @@
+<ion-header>
+
+    <ion-navbar color="original">
+      <ion-title>Transaksi Penarikan Saldo</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h4 text-center>Penarikan saldo masih dalam proses</h4>         
+      
+            <div class="box" text-center >
+               <span class="nilai">IDR {{(deposit|async)?.total|number}}</span> 
+            </div>
+           
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-grid style="font-size:13px; padding-left:15px;">
+        <ion-row>
+          <ion-col col-12><b>Saldo akan dikirim ke rekening</b></ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-item>
+      <h3><b>{{(deposit|async)?.nama_bank}}</b></h3>
+      <h3 item-end><b>{{(deposit|async)?.nomor_rekening}}</b></h3>
+    </ion-item>
+    <ion-item>
+        <p><b>Jumlah penarikan </b></p>
+        <p item-end><b>IDR {{(deposit|async)?.total|number}}</b></p>
+    </ion-item>
+    <ion-item-divider color="light"></ion-item-divider>
+    <ion-item>
+        <h3><b>ID Transaksi</b></h3>
+        <h3 item-end><b>{{(deposit|async)?.invoice}}</b></h3>
+    </ion-item>
+    <ion-item>
+        <h3><b>Waktu Penarikan</b></h3>
+        <h3 item-end><b>{{(deposit|async)?.timestamp|date:'dd-MM-yyyy HH:mm'}}</b></h3>
+    </ion-item>
+  
+    <ion-grid>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col col-7>
+              <button  ion-button  block color="original"  (click)="back()">
+                  Kembali
+              </button>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+  

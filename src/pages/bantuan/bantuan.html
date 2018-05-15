@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-navbar color="original">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Bantuan</ion-title>
+    </ion-navbar>
+      <ion-segment [(ngModel)]="help">
+        <ion-segment-button value="faq">
+          FAQ
+        </ion-segment-button>
+        <ion-segment-button value="chat-admin" (click)="gotoChat()">
+          Chat Admin
+        </ion-segment-button>
+        <ion-segment-button value="syarat">
+          Syarat & Ketentuan
+        </ion-segment-button>
+    </ion-segment> 
+  </ion-header>
+  
+  
+  <ion-content>
+    <div [ngSwitch]="help">
+      <ion-list *ngSwitchCase="'faq'">
+        <ion-card *ngFor="let faq of faqs; let i = index;">
+          <ion-card-header (click)="open(i)">
+            {{i+1}}. {{faq.Judul}}
+          </ion-card-header>
+          <ion-card-content *ngIf="faq.open">
+            <p>{{faq.jawaban}}</p>
+          </ion-card-content>
+        </ion-card>
+        <!-- <ion-card>
+          <ion-card-header>
+            2. What is Lorem Ipsum?
+          </ion-card-header>
+          <ion-card-content>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            3. What is Lorem Ipsum?
+          </ion-card-header>
+          <ion-card-content>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </ion-card-content>
+        </ion-card> -->
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'chat-admin'">
+      
+
+      </ion-list>
+      <ion-list *ngSwitchCase="'syarat'">
+        <ion-card>
+          <ion-card-header>
+            Term of use
+          </ion-card-header>
+          <ion-card-content>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+    </div>
+  </ion-content>

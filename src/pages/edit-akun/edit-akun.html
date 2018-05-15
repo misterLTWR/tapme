@@ -1,0 +1,77 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+      <ion-buttons >
+          <button style="float:left;" ion-button icon-only (click)="dismiss()">   
+            <ion-icon name="md-close"></ion-icon>
+          </button>
+      </ion-buttons>
+
+    <ion-title center>Profil</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="simpan()">   
+          <ion-icon name="md-checkmark" *ngIf="!proses"></ion-icon> 
+          <ion-spinner name="bubbles" *ngIf="proses" ></ion-spinner>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-list>
+      <div class="splash-info">
+      <div (click)="changePicture()" class="splash-logo" >
+          <img class="img-profile" *ngIf="!myImage" [src]="" alt="" src="{{!((profil|async)?.photoUrl)?'assets/imgs/profile-pic.jpg':(profil|async)?.photoUrl}}">
+          <img class="img-profile" *ngIf="myImage" [src]="myImage" alt="">
+          <div class="splash-intro">
+            Ganti Foto
+          </div>
+      </div>
+      
+    </div>
+      <ion-item>
+          <ion-label color="label" stacked>Nama Pengguna</ion-label>
+          <ion-input type="text" [(ngModel)]="username"  placeholder="nama pengguna"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="label" stacked>Nama Lengkap <span class="notice">(Harus sesuai KTP dan Rekening Bank)</span></ion-label>
+          <ion-input type="text" [(ngModel)]="fullname" placeholder="nama lengkap"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="label" stacked>Nama Usaha</ion-label>
+          <ion-input type="text" [(ngModel)]="usaha" placeholder="nama usaha"></ion-input>
+      </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Alamat</ion-label>
+            <ion-input type="text" [(ngModel)]="alamat" placeholder="alamat"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Kota</ion-label>
+            <ion-input type="text" [(ngModel)]="kota" placeholder="kota"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Telepon</ion-label>
+            <ion-input type="text" [(ngModel)]="telepon" placeholder="telepon"></ion-input>
+        </ion-item>
+      <ion-item-divider color="light"></ion-item-divider>
+
+      <ion-list-header>
+        Informasi Pribadi
+      </ion-list-header>
+      <ion-item>
+          <ion-label color="label" stacked>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email" placeholder="email"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="label" stacked>Nomor Handphone</ion-label>
+          <ion-input type="text" [(ngModel)]="nohp" placeholder="nomor handphone"></ion-input>
+      </ion-item>
+
+  </ion-list>
+  <br><br><br><br>
+  
+  {{filePath}}
+</ion-content>

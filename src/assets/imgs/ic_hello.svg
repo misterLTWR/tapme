@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="555px" height="319px" viewBox="0 0 555 319" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_hello</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Visual-Styling" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00a----Home---consultee" transform="translate(-130.000000, -566.000000)">
+            <g id="Group-24" transform="translate(0.000000, 500.000000)">
+                <g id="icon/hello" transform="translate(130.000000, 66.000000)">
+                    <circle id="Oval-6-Copy" fill="#FAD326" style="mix-blend-mode: multiply;" cx="118.75" cy="159.75" r="18.75"></circle>
+                    <rect id="Rectangle-14" x="0" y="0" width="555" height="319"></rect>
+                    <circle id="Oval-6-Copy" fill="#FAD326" style="mix-blend-mode: multiply;" cx="484" cy="144" r="24"></circle>
+                    <path d="M448.307865,146 L462,146 C481.882251,146 498,129.882251 498,110 L498,110 C498,90.117749 481.882251,74 462,74 L360,74 L360,74 C340.117749,74 324,90.117749 324,110 L324,110 L324,110 C324,129.882251 340.117749,146 360,146 L429.392101,146 L429.392101,161.255088 L448.307865,146 Z" id="Combined-Shape" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <text id="Hello!" font-family="SFUIText-Semibold, SF UI Text" font-size="40" font-weight="500" letter-spacing="2.5" fill="#0E60C1">
+                        <tspan x="347.892578" y="124">Hello</tspan>
+                        <tspan x="461.388672" y="124" letter-spacing="3.125">!</tspan>
+                    </text>
+                    <path d="M490.66507,62.2608686 L512.463403,36.5384402" id="Path-19" stroke="#1CC4CD" stroke-width="4"></path>
+                    <path d="M497.881766,68.4610803 L513.927939,59.444061" id="Path-20" stroke="#1CC4CD" stroke-width="4"></path>
+                    <path d="M85.2573077,172 L53,183.985225" id="Path-21" stroke="#FAD326" stroke-width="4"></path>
+                    <path d="M60,161.565704 L79.6597433,161" id="Path-22" stroke="#FAD326" stroke-width="4"></path>
+                    <circle id="Oval-6" fill="#1CC4CD" style="mix-blend-mode: multiply;" cx="498" cy="125" r="10"></circle>
+                    <g id="Group-3" transform="translate(173.000000, 44.000000)">
+                        <path d="M75.5,133.975 L75.5,133.975 L75.5,133.975 C117.197499,133.975 151,167.777501 151,209.475 L151,230.888437 L-7.05338565e-15,231.903262 L-7.05338565e-15,209.475 L0,209.475 C-5.10615855e-15,167.777501 33.8025014,133.975 75.5,133.975 Z" id="Rectangle-31" stroke="#333333" stroke-width="2" fill="#FAD326" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <rect id="Rectangle-9" stroke="#333333" stroke-width="2" fill="#FFFFFF" x="66.2076923" y="115.335" width="18.5846154" height="32.62" rx="9.29230769"></rect>
+                        <path d="M75.5,149.12 L75.5,231.623521" id="Path-11" stroke="#333333" stroke-width="2"></path>
+                        <rect id="Rectangle-32" fill="#1CC4CD" style="mix-blend-mode: multiply;" x="91.7615385" y="187.565" width="24.3923077" height="6.99"></rect>
+                        <path d="M26.7417364,230.259434 C26.514215,212.04167 27.7600106,201.693525 30.4791231,199.215" id="Path-12" stroke="#333333" stroke-width="2"></path>
+                        <path d="M126.634044,230.259434 C126.406523,212.04167 127.652318,201.693525 130.371431,199.215" id="Path-12-Copy" stroke="#333333" stroke-width="2" transform="translate(128.489562, 214.737217) scale(-1, 1) translate(-128.489562, -214.737217) "></path>
+                        <rect id="Rectangle-2" stroke="#333333" stroke-width="2" fill="#FFFFFF" x="24.3923077" y="0.870888958" width="100.998535" height="130.2004" rx="50.4992674"></rect>
+                        <path d="M88.2769231,13.98 C104.484559,21.9675495 116.579034,31.6596969 124.56035,43.0564421" id="Path-17" stroke="#333333" stroke-width="2" stroke-linecap="round"></path>
+                        <path d="M26.7153846,42.990733 C50.0474693,44.952931 70.3663932,34.1176866 87.6721562,10.485" id="Path-6" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M89.0573616,31.0953232 L125.601111,63.7176901" id="Path-8" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <ellipse id="Oval-7" fill="#333333" cx="56.0304029" cy="75.7975342" rx="4.86739927" ry="4.91322264"></ellipse>
+                        <ellipse id="Oval-7-Copy" fill="#333333" cx="92.5358974" cy="75.7975342" rx="4.86739927" ry="4.91322264"></ellipse>
+                        <path d="M74.812515,116.331621 C83.8414938,116.331621 91.1609273,108.94328 91.1609273,99.8292991 C91.1609273,90.7153183 58.4641026,90.7153183 58.4641026,99.8292991 C58.4641026,108.94328 65.7835361,116.331621 74.812515,116.331621 Z" id="Oval-8" fill="#333333"></path>
+                        <ellipse id="Oval-4" fill="#FFFFFF" cx="94.3611722" cy="75.1833814" rx="1.82527473" ry="1.84245849"></ellipse>
+                        <ellipse id="Oval-4-Copy" fill="#FFFFFF" cx="57.8556777" cy="75.1833814" rx="1.82527473" ry="1.84245849"></ellipse>
+                        <path d="M24.3923077,64.2192021 C58.1194089,61.2787358 79.6551826,50.3985119 88.9996287,31.5785305" id="Path-5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M88.1569779,19.5288921 C76.0466074,42.8443364 55.2445064,53.834004 25.7506748,52.4978948" id="Path-9" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M87.8765655,19.8728493 C103.031692,34.9738894 115.199126,44.6067782 124.378868,48.7715156" id="Path-13" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M87.407173,2.51693813 L89.1414536,31.6055876" id="Path-18" stroke="#333333" stroke-width="2"></path>
+                        <path d="M28.7989746,31.2656659 C56.0517419,27.2771245 75.6450175,19.403945 87.5788014,7.64612729" id="Path-7" stroke="#333333" stroke-width="2"></path>
+                        <path d="M37.9693115,17.440957 C57.9140285,16.6782555 74.3409898,12.8930516 87.2501954,6.08534514" id="Path-10" stroke="#333333" stroke-width="2"></path>
+                        <path d="M87.7648259,8.59131104 C100.086996,10.7557744 110.729006,17.2815643 119.690854,28.1686808" id="Path-24" stroke="#333333" stroke-width="2"></path>
+                        <ellipse id="Oval-10" fill="#FAD326" style="mix-blend-mode: multiply;" cx="30.2" cy="94.365" rx="15.1" ry="15.145"></ellipse>
+                        <ellipse id="Oval-10-Copy-2" fill="#FAD326" style="mix-blend-mode: multiply;" cx="30.7807692" cy="96.1125" rx="8.71153846" ry="8.7375"></ellipse>
+                        <ellipse id="Oval-10-Copy" fill="#FAD326" style="mix-blend-mode: multiply;" cx="116.153846" cy="94.365" rx="15.1" ry="15.145"></ellipse>
+                        <ellipse id="Oval-10-Copy-3" fill="#FAD326" style="mix-blend-mode: multiply;" cx="116.734615" cy="93.7825" rx="8.71153846" ry="8.7375"></ellipse>
+                        <path d="M87.9380402,4.44914939 C68.3367816,4.27895673 53.8402416,6.57153008 44.4484205,11.3268694" id="Path-25" stroke="#333333" stroke-width="2"></path>
+                    </g>
+                    <rect id="Rectangle-49" stroke="#333333" stroke-width="2" fill="#0DCFD9" x="62" y="231" width="164" height="45" rx="2"></rect>
+                    <text id="Paperchat" font-family="SFUIText-Semibold, SF UI Text" font-size="28" font-weight="500" fill="#FFFFFF">
+                        <tspan x="73.3984375" y="263">Paperchat</tspan>
+                    </text>
+                    <text id="welcome!" font-family="SFUIText-Semibold, SF UI Text" font-size="18" font-weight="500" fill="#0DCFD9">
+                        <tspan x="103.092773" y="168">welcome!</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

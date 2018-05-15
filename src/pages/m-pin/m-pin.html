@@ -1,0 +1,102 @@
+<ion-header>
+
+  <ion-navbar color="original">
+    <ion-title>Ganti PIN</ion-title>
+    <ion-buttons end>
+        <button (click)="dismiss()"  ion-button icon-only>
+          <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div *ngIf="tipe=='set'">
+        <div *ngIf="first" >
+            <h2 text-center>Set PIN akun</h2>
+            <ion-row (click)="setNew()" padding-top class="pin-input">
+                    <ion-col [ngClass]="!kode.substring(0,1)?'empty':''">{{kode.substring(0,1)}}</ion-col>
+                    <ion-col [ngClass]="kode.substring(0,1) && !kode.substring(1,2)?'empty':''">{{kode.substring(1,2)}}</ion-col>
+                    <ion-col [ngClass]="kode.substring(1,2) && !kode.substring(2,3)?'empty':''">{{kode.substring(2,3)}}</ion-col>
+                    <ion-col [ngClass]="kode.substring(2,3) && !kode.substring(3,4)?'empty':''">{{kode.substring(3,4)}}</ion-col>
+                    <ion-col [ngClass]="kode.substring(3,4) && !kode.substring(4,5)?'empty':''">{{kode.substring(4,5)}}</ion-col>
+                    <ion-col [ngClass]="kode.substring(4,5) && !kode.substring(5,6)?'empty':''">{{kode.substring(5,6)}}</ion-col>
+            </ion-row> 
+            <input type="text" #pin [(ngModel)]="kode"  maxlength="6" (keypress)="keyPress($event)" (keyup)="cekLen($event,0)" class="input-pin">
+            
+        </div>
+              
+        <div *ngIf="second">
+            <h2 text-center>Konfirmasi PIN akun</h2>
+            <ion-row (click)="setConfirm()" padding-top class="pin-input">
+                    <ion-col [ngClass]="!kode2.substring(0,1)?'empty':''">{{kode2.substring(0,1)}}</ion-col>
+                    <ion-col [ngClass]="kode2.substring(0,1) && !kode2.substring(1,2)?'empty':''">{{kode2.substring(1,2)}}</ion-col>
+                    <ion-col [ngClass]="kode2.substring(1,2) && !kode2.substring(2,3)?'empty':''">{{kode2.substring(2,3)}}</ion-col>
+                    <ion-col [ngClass]="kode2.substring(2,3) && !kode2.substring(3,4)?'empty':''">{{kode2.substring(3,4)}}</ion-col>
+                    <ion-col [ngClass]="kode2.substring(3,4) && !kode2.substring(4,5)?'empty':''">{{kode2.substring(4,5)}}</ion-col>
+                    <ion-col [ngClass]="kode2.substring(4,5) && !kode2.substring(5,6)?'empty':''">{{kode2.substring(5,6)}}</ion-col>
+            </ion-row> 
+            <input type="text" #pin2 [(ngModel)]="kode2"  maxlength="6" (keypress)="keyPress($event)"  (keyup)="cekLen($event,1)" class="input-pin">
+            
+        </div>
+              
+              
+    </div>
+    
+    <div *ngIf="tipe=='ganti'">
+            <div *ngIf="oldPin" >
+                    <h2 text-center>Input PIN Lama</h2>
+                    <ion-row (click)="setOld()" padding-top class="pin-input">
+                            <ion-col [ngClass]="!old.substring(0,1)?'empty':''">{{old.substring(0,1)}}</ion-col>
+                            <ion-col [ngClass]="old.substring(0,1) && !old.substring(1,2)?'empty':''">{{old.substring(1,2)}}</ion-col>
+                            <ion-col [ngClass]="old.substring(1,2) && !old.substring(2,3)?'empty':''">{{old.substring(2,3)}}</ion-col>
+                            <ion-col [ngClass]="old.substring(2,3) && !old.substring(3,4)?'empty':''">{{old.substring(3,4)}}</ion-col>
+                            <ion-col [ngClass]="old.substring(3,4) && !old.substring(4,5)?'empty':''">{{old.substring(4,5)}}</ion-col>
+                            <ion-col [ngClass]="old.substring(4,5) && !old.substring(5,6)?'empty':''">{{old.substring(5,6)}}</ion-col>
+                    </ion-row> 
+                    <input type="text" #pinLama [(ngModel)]="old"  maxlength="6" (keypress)="keyPress($event)" (keyup)="cekLen($event,2)" class="input-pin">
+                    
+                </div>
+
+            <div *ngIf="first" >
+                <h2 text-center>Set PIN akun</h2>
+                <ion-row (click)="setNew()" padding-top class="pin-input">
+                        <ion-col [ngClass]="!kode.substring(0,1)?'empty':''">{{kode.substring(0,1)}}</ion-col>
+                        <ion-col [ngClass]="kode.substring(0,1) && !kode.substring(1,2)?'empty':''">{{kode.substring(1,2)}}</ion-col>
+                        <ion-col [ngClass]="kode.substring(1,2) && !kode.substring(2,3)?'empty':''">{{kode.substring(2,3)}}</ion-col>
+                        <ion-col [ngClass]="kode.substring(2,3) && !kode.substring(3,4)?'empty':''">{{kode.substring(3,4)}}</ion-col>
+                        <ion-col [ngClass]="kode.substring(3,4) && !kode.substring(4,5)?'empty':''">{{kode.substring(4,5)}}</ion-col>
+                        <ion-col [ngClass]="kode.substring(4,5) && !kode.substring(5,6)?'empty':''">{{kode.substring(5,6)}}</ion-col>
+                </ion-row> 
+                <input type="text" #pin [(ngModel)]="kode"  maxlength="6" (keypress)="keyPress($event)" (keyup)="cekLen($event,0)" class="input-pin">
+                
+            </div>
+                  
+            <div *ngIf="second">
+                <h2 text-center>Konfirmasi PIN akun</h2>
+                <ion-row (click)="setConfirm()" padding-top class="pin-input">
+                        <ion-col [ngClass]="!kode2.substring(0,1)?'empty':''">{{kode2.substring(0,1)}}</ion-col>
+                        <ion-col [ngClass]="kode2.substring(0,1) && !kode2.substring(1,2)?'empty':''">{{kode2.substring(1,2)}}</ion-col>
+                        <ion-col [ngClass]="kode2.substring(1,2) && !kode2.substring(2,3)?'empty':''">{{kode2.substring(2,3)}}</ion-col>
+                        <ion-col [ngClass]="kode2.substring(2,3) && !kode2.substring(3,4)?'empty':''">{{kode2.substring(3,4)}}</ion-col>
+                        <ion-col [ngClass]="kode2.substring(3,4) && !kode2.substring(4,5)?'empty':''">{{kode2.substring(4,5)}}</ion-col>
+                        <ion-col [ngClass]="kode2.substring(4,5) && !kode2.substring(5,6)?'empty':''">{{kode2.substring(5,6)}}</ion-col>
+                </ion-row> 
+                <input type="text" #pin2 [(ngModel)]="kode2"  maxlength="6" (keypress)="keyPress($event)"  (keyup)="cekLen($event,1)" class="input-pin">
+                
+            </div>
+                  
+                  
+        </div>
+    <ion-grid *ngIf="tunggu">
+
+        <ion-row justify-content-center>
+            <ion-col col-3>
+                <ion-spinner name="dots" style=" width: 50px; height: 50px;stroke: #444; fill: #222;"></ion-spinner>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

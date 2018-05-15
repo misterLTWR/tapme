@@ -1,0 +1,45 @@
+<!--
+  Generated template for the VerifikasiPhonePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true" color="umum">
+    <ion-title>Verifikasi Nomor Handphone</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p text-center>
+    Kode verifikasi telah dikirim ke nomor hadphone Anda,
+    tunggu beberapa saat jika kode belum diterima.
+  </p>
+  <p text-center>
+      <span clas="waktu" *ngIf="aktif"><b>{{this.time}}</b></span> <span class="ulang" *ngIf="!aktif" (click)="kirimUlang()">Kirim ulang kode verifikasi</span>
+  </p>
+  <br>
+<ion-input hidden (ionChange)="getItems()" [(ngModel)]="kodeV"></ion-input>
+  <div class="box">
+    <div class="form-input">
+      <input  [(ngModel)]="kodeV"  type="tel" maxlength="6" required>
+      <ion-icon class="ico" name="md-code-working"></ion-icon>
+      <label class="label-inputan">Masukan Kode</label>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col col-6>
+        <button ion-button [disabled]="!valid"  block (click)="submit()"  color="original">SUBMIT</button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

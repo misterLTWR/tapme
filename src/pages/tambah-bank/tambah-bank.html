@@ -1,0 +1,64 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+		<ion-title>Tambah Rekening </ion-title>
+		<div>
+        <button outline ion-button icon-only (click)="dismiss()">
+            <ion-icon name="close"></ion-icon>
+        </button>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list no-padding>
+				<ion-item>
+					<ion-label color="label" stacked>Pilih Bank</ion-label>
+					<ion-select myTabindex="1"  (ngModelChange)="cekbank($event)"  placeholder="Pilih bank" [(ngModel)]="pBank" >
+						<ion-option *ngFor="let bank of kodeBank; let index;" [value]="index">{{bank.kode}} - {{bank.nama}}</ion-option>
+									<!-- <ion-option >BRI</ion-option>
+									<ion-option value="mandiri">Mandiri</ion-option>
+									-->
+						<ion-option value="lain" >Lain-lain</ion-option>
+					</ion-select>
+				</ion-item>
+        <form [formGroup]="dataBank" >
+          <!-- <ion-label padding-left="16px">Tambahkan Rekening Anda</ion-label> -->
+					<ion-item>
+						<ion-label color="label" stacked>Kode Bank Lainya</ion-label>
+						<ion-input myTabindex="4" type="text" formControlName="kode_bank" [readonly]="lain==false" placeholder="kode bank lain"></ion-input>
+					</ion-item>
+         	<ion-item>
+                <ion-label color="label" stacked>Nama Bank Lainya</ion-label>
+                <ion-input myTabindex="4" type="text" formControlName="nama_bank" [readonly]="lain==false" placeholder="nama bank lainya"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="label" stacked>Nama Pemilik</ion-label>
+              <ion-input myTabindex="2" type="text" formControlName="nama_pemilik" placeholder="nama pemilik"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="label" stacked>Nomor Rekening</ion-label>
+              <ion-input myTabindex="3" type="number" formControlName="nomor_rekening" placeholder="nomor rekening"></ion-input>
+          </ion-item>
+         
+          <br>
+          <br>
+          <ion-grid>
+              <ion-row>
+                <ion-col></ion-col>
+                <ion-col col-7 >
+                    <button  [disabled]="!dataBank.valid" ion-button  block color="original"  (click)="simpan()">
+                        Simpan
+                    </button>
+                </ion-col>
+            
+                <ion-col></ion-col>
+              </ion-row>
+          </ion-grid>
+        </form>
+        
+    </ion-list>
+</ion-content>

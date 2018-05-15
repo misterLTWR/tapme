@@ -1,0 +1,60 @@
+
+<ion-header>
+
+    <ion-navbar color="original">
+      <ion-title>Buat Tagihan</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content>
+        <ion-item text-center>
+            <!-- <ion-grid no-padding>
+                <ion-row>
+                    <ion-col col-6 text-left>
+                        <p>15402000300</p>
+
+                    </ion-col>
+                    <ion-col col-6 text-right>
+                        <p>03-03-2018 12:00</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid> -->
+            <div class="box-nota-image">
+                <div (click)="gantiFoto()" class="splash-logo" >
+                    <img class="img-profile"  alt="" src="{{!((profil|async)?.photoUrl)?'assets/imgs/resto.jpg':(profil|async)?.photoUrl}}">
+                </div>
+            </div>
+
+            <span class="nama-usaha">{{(profil|async)?.usaha}}</span><br>
+            <span>{{(profil|async)?.fullname}}</span><br>
+            <span>{{(profil|async)?.alamat}}</span><br>
+
+        </ion-item>
+        <ion-grid style="font-size:13px;">
+          <ion-row>
+            <ion-col col-12><b>Jumlah Tagihan</b>
+              <!-- <span class="note"><span style="color:red;">*</span>Minimum penarikan IDR 10.000</span> -->
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      <ion-item >
+        <ion-label>IDR</ion-label>
+        <ion-input [disabled]="button" type="number" [(ngModel)]="nilai" placeholder="0"></ion-input>
+          <!-- <ion-icon class="icon-pc" color="icon" name="ic_wallet_on"></ion-icon> -->
+      </ion-item>
+  
+      <ion-grid>
+          <ion-row>
+            <ion-col></ion-col>
+            <ion-col col-6>
+                <ion-spinner class="loading" name="bubbles" *ngIf="loading" ></ion-spinner>
+                <button [disabled]="loading" ion-button  block color="original"  (click)="gotoBarcode()">
+                    Tampil QRCODE
+                </button>
+            </ion-col>
+            <ion-col></ion-col>
+          </ion-row>
+      </ion-grid>
+        
+  </ion-content>

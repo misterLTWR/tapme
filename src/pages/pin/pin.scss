@@ -1,0 +1,36 @@
+page-pin {
+     .box{
+          width: 170px;
+          margin: 0 auto;
+          margin-top: 10px;
+      }
+
+      ion-row.pin-input ion-col {
+        padding: 5px;
+        height: 30px;
+        font-size: 18px;
+        text-align: center;
+        margin: 6px;
+        border-bottom: 1px solid grey;
+     }
+     .input-pin{
+        position: absolute;
+        left: -1000px;
+     }
+     .empty{
+        animation: blink-animation 1s steps(3,start) infinite;
+        -webkit-animation: blink-animation 1s steps(3,start) infinite;
+         border-bottom: 2px solid black !important;
+     }
+     @keyframes blink-animation {
+         to{
+         visibility: hidden;
+         
+         }
+     }
+     @-webkit-keyframes blink-animation {
+        to{
+            visibility: hidden;
+        }
+    }
+}

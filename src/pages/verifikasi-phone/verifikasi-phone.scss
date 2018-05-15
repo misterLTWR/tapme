@@ -1,0 +1,23 @@
+page-verifikasi-phone {
+     .box{
+          width: 170px;
+          margin: 0 auto;
+          margin-top: 10px;
+      }
+      .form-input input {
+          font-size: 50px;
+      }
+      .ico{
+           top: 22px;
+      }
+      .label-inputan{
+           top: 22px;
+      }
+      .form-input input:valid{
+           font-weight: 600;
+      }
+      .ulang{
+           text-decoration: underline;
+      }
+     
+}

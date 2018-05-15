@@ -1,0 +1,31 @@
+page-tambah-barang {
+     .splash-logo {
+        width: 100%;        
+        height: 200px;
+               .img-profile{
+               width: 100%;
+               height: 200px;
+               object-fit: cover;
+               border-radius: 0;
+             }
+     }
+     .splash-intro{
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          right: 0;
+          top: 0px;
+          background-color: rgba(251,251,251,0.6);
+          text-align: center;
+          font-weight: 600;
+          padding: 16px;
+     }
+     .loading{
+          position: absolute;
+          right: -31px;
+          top: 11px;
+     }
+    .scroll-content{
+      margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,86 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title>Resto Enak</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+   
+    <ion-item text-center>
+        <ion-grid no-padding>
+            <ion-row>
+                <ion-col col-6 text-left>
+                    <p>15402000300</p>
+  
+                </ion-col>
+                <ion-col col-6 text-right>
+                    <p>03-03-2018 12:00</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <div class="splash-info">
+            <div (click)="gantiFoto()" class="splash-logo" >
+                <img class="img-profile"  [src]="" alt="" src="assets/imgs/resto.jpg">
+            </div>
+        </div>
+  
+        <span class="nama-usaha">Resto Enak</span><br>
+       <span>Pak Andi</span><br>
+        <span>jl.abdul wahid no 27 Jambi</span><br>
+  
+        
+    </ion-item>
+    
+    <ion-list>
+        <ion-list-header no-margin>
+            Daftar Item
+          </ion-list-header>
+          <button ion-item (click)="presentActionSheet()" *ngFor="let index of [0,1,2,3,4,5]">
+            <ion-avatar item-start>
+              <img src="assets/imgs/nasgor.jpg">
+            </ion-avatar>
+            <h2>Nasi goreng</h2>
+            <p>2 x 10.000</p>
+            <p item-end>IDR 20.000</p>
+          </button>
+          <button ion-item (click)="presentActionSheet()">
+            <ion-avatar item-start>
+              <img src="assets/imgs/qrcode.jpg">
+            </ion-avatar>
+            <h2>Es teh</h2>
+            <p>Disc 5%</p>            
+            <p>2 x 1.000</p>
+            <p item-end>IDR 2.000</p>
+          </button>
+
+    </ion-list>
+    <ion-item-divider color="light"></ion-item-divider>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <p margin-bottom>Jumlah Barang</p>
+            <p>SubTotal</p>
+            <p>Disc</p>
+            <p>Pajak</p>
+            <h2>Total</h2>
+          </ion-col>
+          <ion-col col-6 text-right>
+            <p margin-bottom>6</p>
+            <p>IDR 22.000</p>
+            <p>IDR 0</p>
+            <p>IDR 2.200</p>
+            <h3>IDR 24.200</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p text-center> +200 Poin </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>
+

@@ -1,0 +1,38 @@
+page-m-pin {
+     .scroll-content{
+          margin-bottom: 0px;
+     }
+     a.forgot{
+         font-size: 15px;
+         color: #a71106;
+         text-decoration: none;
+     }
+     ion-row.pin-input ion-col {
+        padding: 5px;
+        height: 30px;
+        font-size: 18px;
+        text-align: center;
+        margin: 6px;
+        border-bottom: 1px solid grey;
+     }
+     .input-pin{
+        position: absolute;
+        left: -1000px;
+     }
+     .empty{
+        animation: blink-animation 1s steps(3,start) infinite;
+        -webkit-animation: blink-animation 1s steps(3,start) infinite;
+         border-bottom: 2px solid black !important;
+     }
+     @keyframes blink-animation {
+         to{
+         visibility: hidden;
+         
+         }
+     }
+     @-webkit-keyframes blink-animation {
+        to{
+            visibility: hidden;
+        }
+    }
+}

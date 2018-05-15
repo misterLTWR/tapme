@@ -1,0 +1,28 @@
+<ion-content padding class="bg-login">
+  
+    <br><br><br><br>
+    <h3 text-center style="font-weight:600;">Tapme</h3>
+    <br>
+    <div class="form-input">
+        <input  type="number" name="phoneNumber" [(ngModel)]="phoneNumber" required>
+        <ion-icon class="ico" name="ios-call-outline"></ion-icon>
+        <label class="label-inputan">No. Hp</label>
+        <span class="bar"></span>
+      </div> 
+    <!-- <div class="group">      
+        <input type="number"  required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Phone</label>
+      </div> -->
+      <br>
+      <p text-center>Saya setuju dengan syarat, ketentuan dan kebijakan privasi yang ditetapkan Tapme.io</p>
+      <br>
+      <button ion-button full color="original" (click)="authPhone()">Masuk</button>
+      <br>
+      <p text-center>Atau</p>
+      <br>
+      <p text-center (click)="gotoRegister()" >Daftar</p>
+
+      <span (click)="loginemail()">email</span>
+</ion-content>

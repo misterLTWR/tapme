@@ -1,0 +1,77 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title *ngIf="!ubah">Tambah item baru</ion-title>
+    <ion-title *ngIf="ubah">Ubah Item</ion-title>
+    <!-- <ion-buttons end>
+        <button ion-button icon-only (click)="simpan()">   
+          <ion-icon name="md-checkmark" *ngIf="!proses"></ion-icon> 
+          <ion-spinner class="loading" name="bubbles" *ngIf="proses"></ion-spinner>
+        </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-list>
+        <div class="splash-info">
+        <div (click)="pilihFoto()" class="splash-logo" >
+            <!-- jika baru image default ketika ganti image ter ubah
+                    jika edit, image dari db tp jika di ubah image harus terganti
+            -->
+            <img class="img-profile" *ngIf="!gbrToUpload" src="{{!gbrUrl?'assets/imgs/nasgor.jpg':gbrUrl}}">
+            <img class="img-profile" *ngIf="gbrToUpload" src="{{gbrToUpload}}">
+            <div class="splash-intro">
+                Ganti Foto
+            </div>
+        </div>
+        <input type="file" #gambar hidden (change)="chFile($event)">
+      </div>
+      <form [formGroup]="form" (submit)="simpan(form)">
+        <ion-item>
+            <ion-label color="label" stacked>Kode Item</ion-label>
+            <ion-input type="text" formControlName="KodeItem" placeholder="kode item"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Nama item</ion-label>
+            <ion-input type="text" formControlName="NamaItem" placeholder="nama item"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Satuan</ion-label>
+            <ion-input type="text" formControlName="Satuan" placeholder="satuan"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Harga Per Satuan</ion-label>
+            <ion-input type="number" formControlName="Harga" placeholder="IDR"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Diskon (Opsi)</ion-label>
+            <ion-input type="email" formControlName="Diskon" placeholder="Disc"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="label" stacked>Pajak (Opsi)</ion-label>
+            <ion-input type="text" formControlName="Ppn" placeholder="Pajak"></ion-input>
+        </ion-item>
+  
+        <ion-grid>
+            <ion-row>
+              <ion-col></ion-col>
+              <ion-col col-6>
+                  <ion-spinner class="loading" name="bubbles" *ngIf="loading" ></ion-spinner>
+                  <button type="submit" [disabled]="!form.valid" ion-button  block color="original">
+                      {{!ubah ?'Simpan':'Simpan Perubahan'}}
+                  </button>
+                  <!-- <button *ngIf="ubah" [disabled]="form.valid" ion-button  block color="original"  (click)="simpanperubahan()">
+                    Simpan Perubahan
+                  </button> -->
+              </ion-col>
+              <ion-col></ion-col>
+            </ion-row>
+        </ion-grid>
+        </form>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,100 @@
+
+<ion-header>
+
+    <ion-navbar  color="original">
+   
+      <div class="name-title" >Admin</div>
+    </ion-navbar>
+  
+  
+  </ion-header>
+  
+  
+  
+  <ion-content>
+    
+        <div class="message-wrap" id="my-listMessage">
+             
+            <div *ngFor="let msg of chats |async" [ngClass]="msg.uid==UID ? 'message right':'message left'">
+                    
+                <!-- <img class="user-img" [src]="msg.userAvatar" alt="" src=""> -->
+                <!-- <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner> -->
+                <div class="msg-detail">
+                    <div class="msg-info">
+                        <p>
+                        {{msg.timestamp| relativeTime}}</p>
+                    </div>
+                    <div class="msg-content">
+                        <span class="triangle"></span>
+                        <p class="line-breaker ">{{msg.msg}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="message left">
+                    
+                    <img class="user-img" [src]="msg.userAvatar" alt="" src=""> 
+                    <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+                    <div class="msg-detail">
+                        <div class="msg-info">
+                            <p>
+                            {{time | relativeTime}}</p>
+                        </div>
+                        <div class="msg-content">
+                            <span class="triangle"></span>
+                            <p class="line-breaker ">Selamat Pagi Pak andi, ada yang bisa saya bantu?</p>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- <div *ngFor="let msg of msgList"
+                 class="message"
+                 [class.left]=" msg.from == uidUser "
+                 [class.right]=" msg.from === myId ">
+                 
+                <img class="user-img" [src]="msg.userAvatar" alt="" src="">
+                <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+                <div class="msg-detail">
+                    <div class="msg-info">
+                        <p>
+                            {{msg.displayName}}&nbsp;&nbsp;&nbsp;{{msg.time | relativeTime}}</p>
+                    </div>
+                    <div class="msg-content">
+                        <span class="triangle"></span>
+                        <p class="line-breaker ">{{msg.message}}</p>
+                    </div>
+                </div>
+            </div> -->
+    
+        </div>
+    </ion-content>
+
+    <!--//[style.height]="showEmojiPicker ? '255px' : '55px'"-->
+    <ion-footer no-border >
+        <ion-grid class="input-wrap">
+            <ion-row>
+                <!-- <ion-col col-2>
+                    <button ion-button clear icon-only item-right (click)="switchEmojiPicker()">
+                        <ion-icon name="md-happy"></ion-icon>
+                    </button>
+                </ion-col> -->
+                <ion-col col-10>
+                    <!-- <ion-textarea #inputan
+                                  placeholder="Tanyakan sesuatu"
+                                  [(ngModel)]="editorMsg"
+                                  (keyup.enter)="sendMsg()"
+                                  (ionFocus)="onFocus()">
+                    </ion-textarea> -->
+                    <ion-textarea 
+                        autosize
+                        placeholder="Tanyakan sesuatu"
+                        [(ngModel)]="editorMsg" >
+                    </ion-textarea>
+                </ion-col>
+                <ion-col col-2>
+                    <button ion-button clear icon-only item-right (click)="send()">
+                        <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <!-- <emoji-picker *ngIf="showEmojiPicker" [(ngModel)]="editorMsg"></emoji-picker> -->
+    </ion-footer>

@@ -1,0 +1,27 @@
+page-penarikan {
+     .icon-pc{
+          font-size: 180px;
+          text-align: center;
+          width: 100%;
+     }
+     .price{
+          font-size: 35px;
+          font-weight: 600;
+          color: #595a5a;
+     }
+     ion-item-divider{
+          height: 15px;
+          min-height: 15px;
+     }
+     .kanan{
+          right: 0px;
+          position: absolute;
+     }
+     .label{
+          margin: 0px;
+     }
+     .note{
+          font-size: 11px;
+          color: #b9b7b7;      
+     }
+}

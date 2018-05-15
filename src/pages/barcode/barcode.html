@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="original"  hideBackButton="true">
+    <ion-title>QRCODE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p text-center>Silahkan scan logo dibawah ini</p>
+  <div class="box-barcode" *ngIf="qrcode">
+    <ngx-qrcode [qrc-value]="qrcode"></ngx-qrcode>
+  </div>
+  <!-- <p> isi :  {{qrcode}} </p> -->
+  <br>
+  <p text-center style="font-size:16px;">
+    Menunggu Pembayaran...
+  </p>
+  <ion-row text-center>
+    <ion-col></ion-col>
+    <ion-col>
+      <button ion-button color="danger" (click)="batal()">Batalkan</button>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+
+</ion-content>
+

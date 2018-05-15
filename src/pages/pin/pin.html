@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-navbar color="original">
+      <ion-title>PIN</ion-title>
+      <ion-buttons end>
+          <button (click)="dismiss()"  ion-button icon-only>
+            <ion-icon name="close"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <br>
+    <br>
+    <ion-row (click)="focus()" padding-top class="pin-input">
+        <ion-col [ngClass]="!kodeV.substring(0,1)?'empty':''">{{kodeV.substring(0,1)}}</ion-col>
+        <ion-col [ngClass]="kodeV.substring(0,1) && !kodeV.substring(1,2)?'empty':''">{{kodeV.substring(1,2)}}</ion-col>
+        <ion-col [ngClass]="kodeV.substring(1,2) && !kodeV.substring(2,3)?'empty':''">{{kodeV.substring(2,3)}}</ion-col>
+        <ion-col [ngClass]="kodeV.substring(2,3) && !kodeV.substring(3,4)?'empty':''">{{kodeV.substring(3,4)}}</ion-col>
+        <ion-col [ngClass]="kodeV.substring(3,4) && !kodeV.substring(4,5)?'empty':''">{{kodeV.substring(4,5)}}</ion-col>
+        <ion-col [ngClass]="kodeV.substring(4,5) && !kodeV.substring(5,6)?'empty':''">{{kodeV.substring(5,6)}}</ion-col>
+    </ion-row> 
+    <input type="text" #pin [(ngModel)]="kodeV"  maxlength="6" (keypress)="keyPress($event)" (keyup)="cekLen($event)" class="input-pin">
+    <!-- <div class="box">
+        <div class="form-input">
+          <input  [(ngModel)]="kodeV"  type="password" maxlength="6" required>
+          <ion-icon class="ico" name="ios-information-circle-outline"></ion-icon>
+          <label class="label-inputan">Masukan PIN Anda</label>
+          <span class="bar"></span>
+        </div>
+    </div> -->
+    <br>
+    <div padding>
+      <button ion-button block color="original" (click)="showConfirm()">Lanjutkan</button>
+    </div>
+  
+  </ion-content>
+  

@@ -1,0 +1,89 @@
+<!-- <ion-header #head> -->
+    <ion-header >
+
+  <ion-navbar color="original">
+    <ion-title>Tapme</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<!-- <ion-content header-hide [header]="head"> -->
+    <ion-content >
+
+  <ion-list no-lines>
+    <ion-item text-center color="original">
+      <span>Saldo (IDR)</span><br>
+      <span class="harga-saldo">{{(saldo|async)?.saldo |number}}</span>
+    </ion-item>
+    <ion-item  color="original" (click)="PagePoin()">
+      <h3>Poin</h3>
+      <h3 item-end>1000</h3>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button color="secondary" block outline (click)="AlertTerima()">Terima</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button block outline (click)="PageBayarscan()">Bayar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-list>
+    <ion-item  (click)="gotoSemuaTransaksi()">
+        Lihat semua transaksi
+        <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+    </ion-item>
+    <ion-row padding-horizontal>
+      <ion-col>Transaksi Terbaru</ion-col>
+    </ion-row>
+    <!-- <ion-list-header>
+    </ion-list-header> -->
+    <!-- <button ion-item (click)="gotoDetailTransaksi()">
+        <ion-avatar item-start>
+         <img src="assets/imgs/cinemax1.jpg">
+        </ion-avatar>
+        <span class="item-waktu">03-03-18</span>
+        <h3>Tiken Nonton</h3>
+        <p>Cinemax</p>
+        <p>- 50000 Poin</p>
+        <div class="item-nominal keluar" item-end>
+         - IDR 0
+        </div>
+    </button> -->
+    <button ion-item *ngFor="let item of histories|async">
+      <!-- <ion-avatar item-start>
+       <img src="assets/imgs/profile-pic.jpg">
+      </ion-avatar> -->
+      <span class="item-waktu">{{item.timestamp |date:'dd-MM-yyyy HH:mm'}}</span>
+      <!-- <h3>{{item.usaha}}</h3> -->
+      <p>{{item.invoice}}</p>
+      <p>{{(item.tipe=='isi')?'Pengisian Saldo':(item.tipe=='tarik')?'Penarikan Saldo':(item.uid_bayar==UID)?'Pembayaran':'Terima Transaksi'}}</p>
+      <!-- <p>+200 Poin</p> -->
+      <div [ngClass]="(item.uid_bayar==UID || item.tipe=='tarik')?'item-nominal keluar':'item-nominal masuk'" item-end>
+       {{(item.uid_bayar==UID||item.tipe=='tarik')?'-':''}} IDR {{item.total|number}}
+      </div>
+    </button>
+    <!-- <button ion-item (click)="gotoDetailTransaksi()" *ngFor="let i of [0,1]" >
+        <ion-avatar item-start>
+         <img src="assets/imgs/profile-pic.jpg">
+        </ion-avatar>
+        <span class="item-waktu">03-03-18</span>
+        <h3>Resto Enak</h3>
+        <p>Inv 159230100</p>
+        <p>Bayar</p>
+        <p>+200 Poin</p>        
+        <div class="item-nominal masuk" item-end>
+         + IDR 1.024.000
+        </div>
+      </button> -->
+    
+    
+  </ion-list>
+  <!-- <button ion-button color="light" (click)="openPIN()"></button> -->
+  <!-- <pre>{{user |json}}</pre> -->
+</ion-content>

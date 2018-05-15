@@ -1,0 +1,68 @@
+page-m-barang {
+     .img-item{
+          height: 170px;
+          width: 100%;
+          object-fit: cover;
+     }
+     .scroll-content{
+          margin-bottom: 0px;
+     }
+     .button-md{
+          position: absolute;
+          right: 0px;
+     }
+     .button-ios{
+          position: absolute;
+          right: 0px;
+     }
+     .button-wp{
+          position: absolute;
+          right: 0px;
+     }
+     .hrga{
+          position: absolute;
+          top: 130px;
+          left: 16px;
+          font-weight: 600;
+          font-size: 12px;
+          background-color: rgba(251, 251, 251, 0.7);
+          border-radius: 15px;
+          padding: 3px 7px;
+     }
+     .jumlah{
+          font-weight: 600;
+          font-size: 20px;
+          width: 100%;
+          text-align: center;
+          border: 1px solid #77bbf5;
+          border-radius: 50px;
+     }
+     .total{
+          font-size: 16px;
+     }
+     .nama-item{
+          position: absolute;
+          font-size: 15px;
+          padding-left: 10px;
+          padding-top: 11px;
+          font-weight: 600;
+          top: -7px;
+          padding-bottom:18px;
+          width: 100%;
+          background-color: rgba(251, 251, 251, 0.5);
+     }
+     .discount{
+          font-size: 13px;
+          padding: 2px 18px;
+          text-align: center;
+          width: 100%;
+          border: 1px solid #77bbf5;
+          border-radius: 50px;
+     }
+     .persen{
+          position: absolute;
+          right: 12px;
+          top: 7px;
+     }
+     
+}

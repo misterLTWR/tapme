@@ -1,0 +1,66 @@
+
+<ion-content>
+  <div class="box-img" *ngIf="Item">
+      <p  class="nama-item">{{Item.NamaItem}}</p>
+          <button outline ion-button icon-only (click)="dismiss()">
+              <ion-icon name="close"></ion-icon>
+          </button>
+
+    <img class="img-item" src="{{!Item.FotoItem?'assets/imgs/default.png':Item.FotoItem}}">
+    <p class="hrga">@IDR {{Item.HargaItem}}</p>
+  </div>
+
+  <p text-center>Jumlah</p>
+  <ion-grid padding-left padding-right>
+    <ion-row>
+      <ion-col no-padding >
+          <button no-margin outline ion-button  block icon-only (click)="kurang()">
+              <ion-icon name="md-remove"></ion-icon>
+          </button>
+      </ion-col>
+      <ion-col col-7 text-center>
+        <input class="jumlah" (ngModelChange)="Total($event)" type="number" placeholder="0" [(ngModel)]="jumlah">
+      </ion-col>
+      <ion-col no-padding >
+          <button no-margin outline ion-button  block icon-only (click)="tambah()">
+              <ion-icon name="md-add"></ion-icon>
+          </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col></ion-col>
+        <ion-col col-5>
+            <input placeholder="Disc" (ngModelChange)="discount($event)" [(ngModel)]="disc" class="discount" type="number" >
+            <span class="persen">%</span>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+    
+    <p class="total" text-center>
+     <b> Total: IDR {{total}}</b>
+    </p>
+    <ion-row *ngIf="hapus == 'daftar'">
+      <ion-col></ion-col>
+      <ion-col col-6>
+          <button  ion-button  block color="original" (click)="pilih()">
+              Pilih
+          </button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row *ngIf="hapus == 'nota'">
+      <ion-col>
+          <button  ion-button  block color="danger" (click)="deleteCart()">
+              Hapus
+          </button>
+      </ion-col>
+      <ion-col></ion-col>
+      <ion-col>
+          <button  ion-button  block color="original" (click)="updateCart()">
+              Ubah
+          </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

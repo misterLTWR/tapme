@@ -1,0 +1,30 @@
+<!--
+  Generated template for the SementaraPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sementara</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item>
+    <ion-label floating>Kode Trx</ion-label>
+    <ion-input type="text" [(ngModel)]="trx"></ion-input>
+  </ion-item>
+  <button ion-button color="secondary" (click)="proses()">
+    Proses
+  </button>
+
+  <button ion-button color="dark" (click)="test()">
+      Test
+    </button>
+</ion-list>
+</ion-content>

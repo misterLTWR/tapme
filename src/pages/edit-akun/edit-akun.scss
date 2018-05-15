@@ -1,0 +1,44 @@
+page-edit-akun {
+     .splash-info {
+          position: relative;
+          z-index: 2;
+          margin-top: 23px;
+          text-align: center;
+        }
+        .splash-logo {
+          margin: auto;
+          border-radius: 50%;
+          background-repeat: repeat;
+          background-size: 100%;
+          width: 128px;
+          height: 128px;
+         
+             .img-profile{
+                  border-radius: 50%;
+                  width: 82px;
+                  height: 82px;
+                  object-fit: cover;
+             }
+        }
+        .splash-intro {
+          color:#42A5F5;
+          font-size: 18px;
+          max-width: 80%;
+          margin: auto;
+        }
+        .splash-intro:hover{
+             cursor: pointer;
+        }
+
+        .list-header-md{
+          margin-bottom: 0px;
+          color:black; 
+        }
+        .loading{
+             color: white;
+        }
+        .notice{
+          font-size: 10px;
+          color: red;
+        }
+}

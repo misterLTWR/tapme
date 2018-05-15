@@ -1,0 +1,55 @@
+page-akun {
+     .background {
+		background-image: url('../assets/imgs/bg_user.jpeg');
+		background-repeat: no-repeat;
+  		background-position: center 0px;
+  		background-size: cover;
+  		-webkit-background-size: cover;
+              -moz-background-size: cover;
+              height: 150px;
+              width: 100%;
+              padding-top: 50px;
+              padding-left: 7px;
+     }
+     .img-item{
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+          object-fit: cover;
+          float: left;
+          border: 2px solid white;
+     }
+     .nama{
+          margin: 13px 7px;
+          font-weight: 700;
+          color: white;
+          top: 0;
+          bottom: 0;
+          position: absolute;
+     }
+     .telpon{
+        margin: 35px 7px;
+        font-weight: 400;
+        color: white;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+     }
+     .toolbar-background-md{
+          background: none;
+     }
+     .scroll-content {
+          margin-top: 0px;
+      }
+     .head{
+          color: white;
+          position: absolute;
+          padding-top: 14px;
+          padding-right: 14px;
+          padding-left: 7px;
+          padding-bottom: 14px;
+          right: 0;
+          font-size: 18px;
+      }
+     
+}

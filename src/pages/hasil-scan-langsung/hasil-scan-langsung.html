@@ -1,0 +1,89 @@
+<ion-header>
+
+  <ion-navbar color="original">
+    <ion-title>Rincian Tagihan</ion-title>
+  </ion-navbar>
+  <ion-item color="original" >
+      <h2>Saldo Saya IDR {{(saldo|async)?.saldo |number}}</h2>
+  </ion-item>
+
+</ion-header>
+
+
+<ion-content>
+  
+  <ion-item text-center>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-6 text-left>
+                <p>{{(data|async)?.invoice}}</p>
+            </ion-col>
+            <ion-col col-6 text-right>
+                <p>{{(data|async)?.timestamp|date:'dd-MM-yyyy HH:mm'}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="box-nota-image">
+        <div (click)="gantiFoto()" class="splash-logo" >
+            <img class="img-profile"  [src]="" alt="" src="assets/imgs/resto.jpg">
+        </div>
+    </div>
+
+    <span class="nama-usaha">{{(data|async)?.usaha}}</span><br>
+    <span>{{(data|async)?.fullname}}</span><br>
+    <span>{{(data|async)?.alamat}}</span><br>
+
+  </ion-item>
+  <div *ngIf="items|async; let itemTrx">
+    <ion-list *ngIf="itemTrx.length > 0 ">
+      <ion-list-header no-margin> Daftar Item </ion-list-header>
+      <button ion-item *ngFor="let item of itemTrx">
+          <ion-avatar item-start>
+            <img src="{{!item.FotoItem||item.FotoItem==null?'assets/imgs/default.png':item.FotoItem}}">
+          </ion-avatar>
+          <h2>{{item.NamaItem}}</h2>
+          <p>{{item.Jumlah}} x {{item.HargaItem}}</p>
+          <p>IDR {{item.nilaiDisc|number}}</p> 
+          <p>IDR {{item.nilaiPajak|number}}</p> 
+          <p item-end>IDR {{item.Total |number}}</p>
+      </button>
+    </ion-list>
+    
+    <ion-row *ngIf="itemTrx.length > 0 ">
+        <ion-col col-4>
+          <p>SubTotal</p>
+          <p>Disc</p>
+          <p>Pajak</p>
+        </ion-col>
+        <ion-col col-8 text-right>
+          <p>IDR {{(data|async)?.subTotal | number}}</p>
+          <p>IDR {{(data|async)?.disc | number}}</p>
+          <p>IDR {{(data|async)?.pajak | number}}</p>
+        </ion-col>
+    </ion-row>
+    
+    </div>
+      <ion-row>
+        <ion-col col-4>
+          <h2>Total</h2>
+        </ion-col>
+        <ion-col col-8 text-right>
+          <h2>IDR {{(data|async)?.total | number}}</h2>
+        </ion-col>
+      </ion-row>
+    <ion-grid>
+        <ion-row *ngIf="((saldo|async)?.saldo) < ((data|async)?.total)">
+          <p><i>Maaf..! <br> saldo tidak mencukupi untuk melanjutkan pembayaran</i></p>
+        </ion-row>
+        <ion-row *ngIf="((saldo|async)?.saldo) >= ((data|async)?.total)">
+          <ion-col></ion-col>
+          <ion-col col-6>
+              <ion-spinner class="loading" name="bubbles" *ngIf="loading" ></ion-spinner>
+              <button  [disabled]="button" ion-button  block color="original"  (click)="bayar()">
+                 konfirmasi
+              </button>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

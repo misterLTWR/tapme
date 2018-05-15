@@ -1,0 +1,144 @@
+
+<ion-header >
+
+  <ion-navbar color="umum">
+    <ion-title>Semua Transaksi</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content #Content >
+    <button ion-item >
+        <ion-label>Dari </ion-label>
+        <ion-datetime displayFormat="MM DD YYYY" [(ngModel)]="awal" (change)="setStart()"></ion-datetime>
+        <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+    </button>
+    <button ion-item >
+        <ion-label>Sampai </ion-label>
+        <ion-datetime displayFormat="MM DD YYYY" [(ngModel)]="akhir" (change)="setEnd()"></ion-datetime>
+        <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+    </button>
+    <!-- <ion-item>
+      <ion-select  (change)="setSort()" >
+
+      </ion-select>
+    </ion-item> -->
+    <br>
+    <ion-list>
+      <ion-item>
+        Transaksi
+      </ion-item>
+      <div>
+        <button ion-item (click)="PageTransaksidetail()" *ngFor="let item of items|async">
+          <!-- <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar> -->
+          <span class="item-waktu">{{item.timestamp|date:'dd-MM-yyyy HH:mm'}}</span>
+          <h3>{{item.invoice}}</h3>
+          <p>{{(item.tipe=='isi')?'Pengisian Saldo':(item.tipe=='tarik')?'Penarikan Saldo':(item.uid_bayar==UID)?'Pembayaran':'Terima Transaksi'}}</p>
+          <div [ngClass]="(item.uid_bayar==UID || item.tipe=='tarik')?'item-nominal keluar':'item-nominal masuk'" item-end>
+              {{(item.uid_bayar==UID||item.tipe=='tarik')?'-':''}} IDR {{item.total|number}}
+          </div>
+        </button>
+        <!-- <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+          <h3>Resto Enak</h3>
+          <p>Terima</p>
+          <div class="item-nominal masuk" item-end>
+           + IDR 1.024.000
+          </div>
+        </button> 
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Bayar</p>
+          <div class="item-nominal keluar" item-end>
+           - IDR 1.024.000
+          </div>
+        </button> 
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Terima</p>
+          <div class="item-nominal masuk" item-end>
+           + IDR 1.024.000
+          </div>
+        </button> 
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Bayar</p>
+          <div class="item-nominal keluar" item-end>
+           - IDR 1.024.000
+          </div>
+        </button>
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Terima</p>
+          <div class="item-nominal masuk" item-end>
+           + IDR 1.024.000
+          </div>
+        </button>
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Bayar</p>
+          <div class="item-nominal keluar" item-end>
+           - IDR 1.024.000
+          </div>
+        </button> 
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Bayar</p>
+          <div class="item-nominal keluar" item-end>
+           - IDR 1.024.000
+          </div>
+        </button> 
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Bayar</p>
+          <div class="item-nominal keluar" item-end>
+           - IDR 1.024.000
+          </div>
+        </button> 
+        <button ion-item (click)="PageTransaksidetail()">
+          <ion-avatar item-start>
+           <img src="assets/imgs/profile-pic.jpg">
+          </ion-avatar>
+           <span class="item-waktu">03-03-18</span>
+          <h3>Resto Enak</h3>
+          <p>Bayar</p>
+          <div class="item-nominal keluar" item-end>
+           - IDR 1.024.000
+          </div>
+        </button> -->
+      </div>
+    </ion-list>
+</ion-content>

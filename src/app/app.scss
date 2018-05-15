@@ -1,0 +1,369 @@
+
+
+ion-content{
+     font-family: 'Roboto-Light';
+     font-size: 14px;
+}
+
+.harga-saldo{
+  font-size: 30px;
+  color: #3dff0e;
+}
+
+@font-face {
+     font-family: 'Roboto-Light';
+     font-style: normal;
+     font-weight: 400;
+     src: local('Roboto Light'), local('Roboto-Light'), url(../assets/fonts/Roboto-Light.ttf) format('woff2');
+   }
+
+.button{
+     border-radius: 50px;
+}
+p{
+     font-size: 12px;
+     -webkit-margin-before: 0.5rem;
+    -webkit-margin-after: 0.5rem;
+}
+.loading{
+  position: absolute;
+  right: -31px;
+  top: 11px;
+}
+
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+     background-image: none;
+}
+
+.bg-login{
+
+		background-image: url('../assets/imgs/bg-login.jpg');
+		background-repeat: no-repeat;
+  		background-position: center ;
+  		background-size: cover;
+  		-webkit-background-size: cover;
+    	-moz-background-size: cover;
+	
+}
+
+
+.tabs-md .tabbar{
+     height: 50px;
+}
+.tabs-md .tab-button-text{
+  font-size: 1rem;
+}
+.tabs-md[tabsLayout=icon-top] .has-icon .tab-button-text{
+  margin-top: 0px;
+}
+.scroll-content{
+     margin-bottom: 40px;
+}
+// .tabs-md-original .tab-button, .tabs-md-original .tab-button-icon {
+//       color: rgba(0, 0, 0, 0.5);
+// }
+//End Tabs
+
+
+ion-label{
+     font-size: 13px;
+}
+ion-item-divider{
+  height: 15px;
+  min-height: 15px;
+}
+.item-divider-md{
+  border-bottom: none;
+}
+
+
+
+
+//Item
+.item-md ion-avatar img{
+  border-radius: 15%;
+  overflow: hidden;
+  width: 51px;
+  height: 52px;
+}
+.item-ios ion-avatar img{
+  border-radius: 15%;
+  overflow: hidden;
+  width: 51px;
+  height: 52px;
+}
+
+.item-md p{
+     font-size: 12px;
+}
+.item-waktu{
+     font-size: 11px;
+  
+}
+.item-nominal{
+     font-size: 14px;
+}
+.item-nominal.keluar {
+  color:red;
+}
+.item-nominal.masuk {
+  color:#0abb3e;
+}
+
+//End Item
+
+//Alert
+
+.alert-md .alert-title{
+  font-size: 1.4rem;
+  color: #24317c;
+  font-weight: 600;
+}
+.alert-md .alert-message{
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0 24px 8px;
+  overflow-y: hidden;
+  font-size: 1.3rem;
+}
+.alert-md .alert-sub-title{
+  font-size: 1.3rem;
+}
+.alert-md .alert-wrapper{
+  border-radius: 15px;
+}
+.alert-md .alert-button-group{
+  justify-content: space-around;
+  padding: 8px 24px 16px 24px;
+}
+.alert-md .alert-button{
+  background-color: #334bde;
+  border-radius: 50px;
+  padding-left: 16px;
+  text-align: center;
+  padding-right: 16px;
+  text-transform: none;
+  width: 100%;
+  color: white;
+  font-size: 13px;
+  margin: 6px 0px;
+}
+.alert-md .alert-button.activated{
+  background-color: #38469a;
+}
+.alert-md .alert-button .button-inner{
+  justify-content: center;
+}
+//End Alert
+
+//barcode
+.box-barcode{
+  width: 280px;
+  height: 280px;
+  margin: 0px auto;
+}
+.box-barcode img{
+  width: 100%;
+}
+//End Barcode
+
+//action sheet
+.action-edit {
+  .action-sheet-group{
+    border-radius: 15px 15px 0px 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgba(30,39,109, 0.89);
+  }
+  .action-sheet-button{
+    color: #dadada;
+  }
+  .action-sheet-title{
+    color: white;
+  }
+}
+
+//End action sheet
+
+
+//Modal style 
+
+.modal-edit{
+   
+  padding: 30px;
+  background: rgba(0,0,0,0.5);
+
+  .modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 62%;
+    overflow: hidden;
+    border-radius: 15px
+  }
+}
+
+.modal-edit-promo{
+   
+  padding: 30px;
+  background: rgba(0,0,0,0.5);
+
+  .modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    width: 85%;
+    height: 57%;
+    overflow: hidden;
+    border-radius: 15px
+  }
+}
+//End Modal Style
+
+//Header Nota image
+.nama-usaha{
+  font-size: 17px;
+  font-weight: bold;
+}
+.box-nota-image {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.splash-logo {
+  margin: auto;
+  border-radius: 50%;
+  background-repeat: repeat;
+  background-size: 100%;
+  width: 91px;
+  height: 91px;
+ 
+     .img-profile{
+          border-radius: 50%;
+          width: 82px;
+          height: 82px;
+          object-fit: cover;
+     }
+}
+
+//End Header Nota Image
+
+.ico { 
+  color: #b0bec5;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  top: 5px;
+  left: 2px;
+  transition: 0.3s ease all;
+}
+/*---- style form -----*/
+
+.form-input { position: relative; padding: 0; margin: 0; padding-left: 0px; padding-right: 0px; }
+.form-input {margin-top: 27px;}
+.form-input > input:focus{ box-shadow: none; }
+
+.form-input > input {
+  width: 100%;
+  padding-left: 25px;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  color: rgba(0,0,0,0.8);
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: normal;
+  border-bottom: 1px solid  #3D5AFE;
+}
+.label-inputan {
+    padding-left: 25px;
+    color: rgba(0,0,0,0.4);
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 5px;
+    transition: 0.2s ease all;
+}
+/*---- END style form -----*/
+
+/*----- Animasi bar -----*/
+.bar { position: relative; display: block; width:auto; }
+
+.bar:before,
+.bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: -1px;
+    position: absolute;
+    transition: 0.5s ease all;}
+
+.bar:before{ left: 50%; }
+  
+.bar:after{ right: 50%; }
+
+/*----- End Animasi bar -----*/ 
+
+/*------ INPUT - VALIDASI-----*/
+
+.form-input input:valid { border-bottom: 1px solid #3D5AFE; 
+
+}
+
+.form-input input:valid ~ .bar:before,
+.form-input input:valid ~ .bar:after {
+    background: #3D5AFE !important;
+}
+.form-input input:focus ~ .label-inputan,
+.form-input input.used ~ .label-inputan {
+    top: -18px;
+    font-size: 13px;
+    color: #64dd17;
+}
+.form-input input:focus.noused  ~ .label-inputan {
+    font-size: 13px;
+    color: rgba(255,0,0,0.5);
+} 
+
+.form-input input:valid ~ .ico {
+  top: 0px;
+  font-size: 25px;
+  color: #7cb342;
+}
+
+.form-input input:valid.noused ~ .label-inputan {
+color: #7cb342;
+}
+.form-input .noused{
+border-bottom: 1px solid red;
+}
+
+.form-input input.noused ~ .label-inputan {    
+   top: -18px;
+   font-size: 16px;
+   color:#f44336;
+}
+.form-input input:valid ~ .label-inputan,
+.form-input input:valid.used ~ .label-inputan {
+left: -26px;
+font-size: 20px;
+top: -23px;
+color: #7cb342;
+}
+
+.form-input input:focus ~ .bar:before,
+.form-input  input:focus ~ .bar:after {
+   width: 50%;
+}
+/*------ END INPUT - VALIDASI-----*/

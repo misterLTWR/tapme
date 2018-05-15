@@ -1,0 +1,96 @@
+<!--
+  Generated template for the SaldoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="original">
+    <ion-title>Saldo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list no-lines>
+    <ion-item color="original">
+      <h2>Saldo (IDR)</h2>
+      <h1 item-end style="color: #3dff0e;">{{(saldo|async)?.saldo |number}}</h1>
+    </ion-item>
+    <ion-item color="original" (click)="PagePoin()">
+      <h3>Poin</h3>
+      <h3 item-end>1000</h3>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="secondary" block outline (click)="PageTopup()">
+          Isi Saldo
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="danger" outline block (click)="PageTarik()">
+           
+          Tarik Saldo
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-list-header>
+      Transaksi Dalam Proses
+    </ion-list-header>
+    <button ion-item *ngFor="let item of trxReq|async" (click)="depositDetail(item.id,item.tipe)">
+        <ion-icon *ngIf="item.tipe=='isi'" item-start color="secondary" name="md-arrow-round-down"></ion-icon>
+        <ion-icon *ngIf="item.tipe=='tarik'" item-start color="danger" name="md-arrow-round-up"></ion-icon>
+        <span class="item-waktu">{{item.timestamp |date:'dd-MM-yyyy'}}</span>
+        <h3>{{item.invoice}}</h3>
+        <p>{{item.tipe=='isi'?'Penambahan Saldo':'Penarikan Saldo'}}</p>
+        <div [ngClass]="item.tipe=='isi'?'item-nominal masuk':'item-nominal keluar'" item-end>
+          {{item.tipe=='isi'?'+':'-'}} IDR {{item.total|number}}
+        </div>
+    </button>
+    <!-- <button ion-item (click)="depositDetail()">
+        <ion-icon item-start color="secondary" name="md-arrow-round-down"></ion-icon>
+        <span class="item-waktu">03-03-18</span>
+        <h3>INV-157487784</h3>
+        <p>Penambahan Saldo</p>
+        <div class="item-nominal masuk" item-end>
+         + IDR 120.000
+        </div>
+    </button> -->
+  </ion-list>
+  <ion-list>
+      <ion-list-header>
+        Transaksi Selesai
+      </ion-list-header>
+      <button ion-item *ngFor="let item of trxDone|async" (click)="gotoTransaksiSelesai(item.id,item.tipe)">
+        <ion-icon *ngIf="item.tipe=='isi'" item-start color="secondary" name="md-arrow-round-down"></ion-icon>
+        <ion-icon *ngIf="item.tipe=='tarik'" item-start color="danger" name="md-arrow-round-up"></ion-icon>
+        <span class="item-waktu">{{item.timestamp |date:'dd-MM-yyyy'}}</span>
+        <h3>{{item.invoice}}</h3>
+        <p>{{item.tipe=='isi'?'Penambahan Saldo':'Penarikan Saldo'}}</p>
+        <div [ngClass]="item.tipe=='isi'?'item-nominal masuk':'item-nominal keluar'" item-end>
+          {{item.tipe=='isi'?'+':'-'}} IDR {{item.total|number}}
+        </div>
+      </button>
+      <!-- <button ion-item (click)="gotoTransaksiTambah()">
+          <ion-icon item-start color="secondary" name="md-arrow-round-down"></ion-icon>
+          <span class="item-waktu">03-03-18</span>
+          <h3>INV-157487784</h3>
+          <p>Penambahan Saldo</p>
+          <div class="item-nominal masuk" item-end>
+           + IDR 120.000
+          </div>
+      </button> -->
+    </ion-list>
+
+    
+</ion-content>

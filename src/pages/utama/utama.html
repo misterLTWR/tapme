@@ -1,0 +1,46 @@
+<!-- <ion-content >
+    <ion-slides pager 
+    (ionSlideDidChange)="slideChanged()"
+    (ionSlideDrag)="slideMove()"
+    > -->
+
+<ion-content >
+  <ion-slides pager 
+  
+  >
+    <ion-slide>
+      <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat" >
+          <ion-icon name="ios-people" color="umum" [@bounce]="state" (@bounce.done)="animationDone()"></ion-icon>
+      </div>
+      <div [@bounce]="state">
+        <h2>Selemat Datang</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+          <ion-icon name="ios-repeat" color="umum" [@bounce]="state" (@bounce.done)="animationDone()"></ion-icon>
+      </div>
+      <div [@bounce]="state">
+        <h2>Memudahkan Transaksi</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+          <ion-icon name="ios-thumbs-up-outline" color="umum" [@bounce]="state" (@bounce.done)="animationDone()"></ion-icon>
+      </div>
+      <div [@bounce]="state">
+        <h2>Mari memulai</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+   
+         <button [@bounce]="state" ion-button  color="umum" (click)="skip()" id="skip">
+            {{skipMsg}}
+      </button>
+  
+     
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>

@@ -1,0 +1,55 @@
+
+
+    
+
+
+<ion-content >
+  <!-- <span class="head" (click)="gotoEditAkun()">
+    <ion-icon name="md-settings" ></ion-icon>
+  </span> -->
+  <div class="background">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+            <img class="img-item" src="{{!(profil|async)?.photoUrl?'assets/imgs/profile-pic.jpg':(profil|async)?.photoUrl}}" (click)="gotoProfil()">
+            <!-- <img class="img-item" src="assets/imgs/profile-pic.jpg" (click)="gotoProfil()"> -->
+        </ion-col>
+        <ion-col>
+         <span class="nama">{{!(profil|async)?.username?'belum di atur':(profil|async)?.username}}</span><br>
+         <span class="telpon">{{!(user|async)?.phoneNumber?(user|async)?.email:(user|async)?.phoneNumber}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+  <ion-list>
+    <ion-item class="hint" *ngIf="!(profil|async)">
+      <p><i>Profil belum di lengkapi</i></p>
+    </ion-item>
+    <button ion-item (click)="gotoProfil()">
+      Profil 
+      <ion-badge color="danger" item-end *ngIf="noProfil">belum disetel</ion-badge>
+    </button>
+    <button ion-item (click)="gotoItem()">
+      Daftar Item
+    </button>
+    <button ion-item (click)="gotoPoin()">
+      Tukar Poin
+      <div item-end detail-push>
+        1000
+      </div>
+    </button>
+    <button ion-item (click)="gotoGantiPin()">
+       Ganti PIN
+       <ion-badge color="danger" item-end *ngIf="noPin">belum disetel</ion-badge>
+    </button>
+    <button ion-item (click)="gotoBantuan()">
+        Bantuan
+    </button>
+    <button ion-item (click)="keluar()">
+        Keluar
+    </button >
+  </ion-list>
+<!-- *ngIf="!pfData.email || !pfData.fullname">belum diatur</ion-badge> -->
+  <pre>{{pfData | json}}</pre>
+</ion-content>

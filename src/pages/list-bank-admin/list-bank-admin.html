@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar color="umum">
+    <ion-title>Daftar Rekening</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col col-6>
+          <button ion-button  (click)="tambahBank()">
+              Tambah Rekening
+          </button>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list no-padding>
+      <ion-list-header>
+         Isi Saldo dari Rekening: / Tarik Saldo ke Rekening:
+      </ion-list-header>
+    <div>
+      <button *ngFor="let bank of banks|async" ion-item (click)="pilihBank(bank)">
+        <h3>{{bank.nama_bank}}</h3>
+        <p>{{bank.nomor_rekening}}</p>
+        <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+      </button>
+    </div>
+    <!-- <div>
+        <button ion-item (click)="pilihTarikSaldo(item)">
+            <h3>BCA</h3>
+            <p>02343576723</p>
+            <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+        </button>
+    </div>
+    <div>
+        <button ion-item (click)="pilihBank(item)">
+            <h3>BCA</h3>
+            <p>02343576723</p>
+            <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+         </button>
+    </div> -->
+  </ion-list>
+</ion-content>

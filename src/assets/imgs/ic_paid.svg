@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="262px" height="160px" viewBox="0 0 262 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_paid</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Visual-Styling" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00b----Home---consultant" transform="translate(-1008.000000, -1301.000000)">
+            <g id="Group-2" transform="translate(129.000000, 1027.000000)">
+                <g id="Group" transform="translate(879.000000, 274.000000)">
+                    <rect id="Rectangle-7" x="0" y="0" width="262" height="160"></rect>
+                    <g id="Group-3" transform="translate(59.000000, 44.000000)">
+                        <g id="Group-2" transform="translate(0.000000, 12.000000)">
+                            <rect id="Rectangle-11" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="0" y="0" width="114" height="51"></rect>
+                            <path d="M12,31 L12,20 C18.0751322,20 23,15.0751322 23,9 L91,9 C91,15.0751322 95.9248678,20 102,20 L102,31 C95.9248678,31 91,35.9248678 91,42 L23,42 C23,35.9248678 18.0751322,31 12,31 Z" id="Combined-Shape" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <circle id="Oval-9" fill="#1CC4CD" cx="54" cy="26" r="16"></circle>
+                            <circle id="Oval-9-Copy" fill="#FAD326" style="mix-blend-mode: multiply;" cx="58" cy="24" r="14"></circle>
+                            <polyline id="Path-14" stroke="#333333" stroke-width="2" points="48 22.7349134 55.7089825 31.5679428 75.0926707 15"></polyline>
+                        </g>
+                        <polyline id="Rectangle-11" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="9 12.2185617 9 0 123 0 123 35.285018 123 51 114.243149 51"></polyline>
+                        <circle id="Oval-14" fill="#0E60C1" style="mix-blend-mode: multiply;" cx="124" cy="60" r="25"></circle>
+                        <rect id="Rectangle-22" fill="#FFFFFF" x="123" y="48" width="2" height="24"></rect>
+                        <polyline id="Path-27" stroke="#FAD326" stroke-width="2" points="136.032905 60.0348702 124.025383 72 112 60"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

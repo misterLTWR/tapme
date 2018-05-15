@@ -1,0 +1,88 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title>Buat Nota Baru</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-item text-center>
+      <!-- <ion-grid no-padding>
+          <ion-row>
+              <ion-col col-6 text-left>
+                  <p>15402000300</p>
+
+              </ion-col>
+              <ion-col col-6 text-right>
+                  <p>03-03-2018 12:00</p>
+              </ion-col>
+          </ion-row>
+      </ion-grid> -->
+      <div class="box-nota-image">
+          <div class="splash-logo" >
+              <img class="img-profile"  alt="" src="{{!((profil|async)?.photoUrl)?'assets/imgs/resto.jpg':(profil|async)?.photoUrl}}">
+          </div>
+      </div>
+
+      <span class="nama-usaha">{{(profil|async)?.usaha}}</span><br>
+     <span>{{(profil|async)?.fullname}}</span><br>
+      <span>{{(profil|async)?.alamat}}</span><br>
+
+  </ion-item>
+  <button ion-item (click)="gotoDaftarBarang()">
+    Pilih Item
+    <ion-icon name="ios-arrow-dropright" item-end></ion-icon>
+  </button>
+  <!--  -->
+    <ion-list>
+        <button ion-item  *ngFor="let item of carts|async" (click)="presentActionSheet(item)">
+            <ion-avatar item-start>
+              <img src="{{!item.FotoItem||item.FotoItem==null?'assets/imgs/default.png':item.FotoItem}}">
+            </ion-avatar>
+            <h2>{{item.NamaItem}}</h2>
+            <p>{{item.Jumlah}} x {{item.HargaItem}}</p>
+            <p>IDR {{item.nilaiDisc|number}}</p> 
+            <p>IDR {{item.nilaiPajak|number}}</p> 
+            <p item-end>IDR {{item.Total |number}}</p>
+        </button>
+        <!-- <button ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/nasgor.jpg">
+            </ion-avatar>
+            <h2>Es teh</h2>
+            <p>Disc 5%</p>            
+            <p>2 x 1.000</p>
+            <p item-end>IDR 2.000</p>
+        </button> -->
+    </ion-list>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+              <p margin-bottom>Jumlah Item</p>
+            <p>SubTotal</p>
+            <p>Disc</p>
+            <p>Pajak</p>
+            <h2>Total</h2>
+          </ion-col>
+          <ion-col col-6 text-right>
+              <p margin-bottom>{{pcs|number}}</p>
+            <p>IDR {{total|number}}</p>
+            <p>IDR {{disc|number}}</p>
+            <p>IDR {{pajak|number}}</p>
+            <h2>IDR {{total-disc|number}}</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button block outline color="danger" (click)="hapusNota()">Batal</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button block color="original" [disabled]="total==0" (click)="PageCode()">Tampil QRCode</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+</ion-content>

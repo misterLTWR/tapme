@@ -1,0 +1,42 @@
+
+<ion-header>
+
+  <ion-navbar color="umum">
+    <ion-title>Daftar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-login">
+  <ion-list>
+
+    <!-- <ion-item>
+      <ion-label fixed>Negara</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item> -->
+    <p>
+      Masukan nomor handphone Anda
+    </p>
+    <div class="form-input">
+      <input  type="number" name="phoneNumber" [(ngModel)]="phoneNumber" required>
+      <ion-icon class="ico" name="ios-call-outline"></ion-icon>
+      <label class="label-inputan">No. Hp</label>
+      <span class="bar"></span>
+    </div>
+    <p text-center>Saya setuju dengan syarat, ketentuan dan kebijakan privasi yang ditetapkan Tapme.io</p> 
+    <br>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col col-6>
+            <ion-spinner class="loading" name="bubbles" *ngIf="valid" ></ion-spinner>
+          <button [disabled]="valid" ion-button block color="original" (click)="gotoVerifikasi()">Daftar</button>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+</ion-content>
